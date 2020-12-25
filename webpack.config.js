@@ -17,7 +17,31 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: [
+          'style-loader', 
+          // {
+          //   loader: 'typings-for-css-modules-loader',
+          //   options: {
+          //     modules: true,
+          //     namedExport: true
+          //   }
+          // },  
+          'css-loader', 
+          'postcss-loader'
+        ]
+      },
+      {//antd样式处理
+        test:/\.css$/,
+        exclude:/src/,
+        use:[
+          "style-loader",
+          {
+            loader: "css-loader",
+              options:{
+                importLoaders:1
+              }
+          }
+        ]
       },
       {
         test: /\.less$/,

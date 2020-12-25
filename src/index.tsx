@@ -1,24 +1,17 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import 'antd-mobile/dist/antd-mobile.css';
+// import './index.css';
 
-import { Hello } from "./components/Hello";
-import Protal from './components/Protal';
+// import alert from './components/Alert';
+// import Protal from './components/Protal';
+// import operation from './components/Operation';
+import prompt from './components/Prompt';
 
 const rootDOM = document.getElementById("root");
-let helloRef: any;
 
-// ReactDOM.render(
-//   <Hello compiler="TypeScript" framework="React" ref={node => helloRef = node}/>,
-//   rootDOM,
-//   () => {
-//     console.log(helloRef);
-//     console.log(ReactDOM.findDOMNode(helloRef));
+// ReactDOM.render(<Protal />, rootDOM);
 
-//     const timer = setTimeout(() => {
-//       (rootDOM as HTMLElement).firstChild?.remove();
-//       // ReactDOM.unmountComponentAtNode(rootDOM as HTMLElement)
-//     }, 3000);
-//   }
-// );
-
-ReactDOM.render(<Protal />, rootDOM);
+// alert('title', 'hello alert')
+// operation([{text: 'dssd'}, {text: 'dddsss'}]);
+prompt('title', '你多大了？')
