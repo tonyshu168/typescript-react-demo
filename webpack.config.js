@@ -88,6 +88,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json']
   },
+  optimization: {
+    usedExports: true,
+  },
   // externals: {
   //   'react': 'React',
   //   'react-dom': 'ReactDOM'
